@@ -1,0 +1,51 @@
+
+.wrapper
+    max-width: $xxxlarge-min
+    margin: 0 auto
+
+.card
+    box-shadow: inset $box-shadow
+    background: #ccc
+    border-radius: 10px
+
+.ex_padding
+    padding: 8px
+
+.topic
+    font-size: 24px
+    font-weight: 900
+    text-align: center
+    margin: 16px 0 8px 0
+
+
+.code
+    padding: 16px
+    width: 100%
+    height: 100%
+    font-family: $coders-font
+    transition: all .2s ease-in-out
+
+    &_title
+        background: #013220
+        color: #fff
+        text-align: center
+        font-size: 20px
+        height: 40px
+        line-height: 40px
+        // margin-bottom: 4px
+        border-radius: 10px 10px 0 0
+    &_body
+        text-align: left
+        padding: 16px
+        // border: 1px solid $primary-border
+        background: #fff
+        outline: none
+        border: 4px solid #013220
+        border-top: none
+        white-space: normal
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.2)
+        border-radius: 0 0 10px 10px
+        overflow: auto
+
+.code_active
+    white-space: nowrap

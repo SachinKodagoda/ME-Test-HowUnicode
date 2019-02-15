@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+  head
+    include ../globals/head.pug
+  body
+    .wrapper
+      .topic JavaScript (ES6 and Beyond) Cheat Sheet
+      .row.ex_padding
+        .col.s12.m6.l4.ex_padding
+          .card
+            .code
+              .code_title The Ternary Operator
+              .code_body.jsHigh
+                | /* ---- Longhand ---- */
+                br
+                | const&nbsp;x&nbsp;=&nbsp;20 ;
+                br
+                | let&nbsp;answer ;
+                br
+                | if&nbsp;(x&nbsp;>&nbsp;10)&nbsp;{
+                br
+                | &nbsp; &nbsp; answer&nbsp;=&nbsp;'greater than 10' ;
+                br
+                | } else {
+                br
+                | &nbsp; &nbsp; answer&nbsp;=&nbsp;'less than 10' ;
+                br
+                | }
+                br
+                br
+                | /* ---- Shorthand ---- */
+                br
+                | const&nbsp;answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10&nbsp;? 'greater than 10' : 'less than 10' ;
+        .col.s12.m6.l4.ex_padding
+          .card
+            .code
+              .code_title Short-circuit Evaluation
+              .code_body.jsHigh
+                | /* ---- Longhand ---- */
+                br
+                | if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'') {
+                br
+                | &nbsp; &nbsp; v2&nbsp;=&nbsp;v1;
+                br
+                | } else {
+                br
+                | &nbsp; &nbsp; v2&nbsp;=&nbsp;'new'
+                br
+                | }
+                br
+                br
+                | /* ---- Shorthand ---- */
+                br
+                | let&nbsp;v2&nbsp;=&nbsp;v1&nbsp;||&nbsp;'new';
+        .col.s12.m6.l4.ex_padding
+          .card
+            .code
+              .code_title Declaring Variables
+              .code_body.jsHigh
+                | /* ---- Longhand ---- */
+                br
+                | let x;
+                br
+                | let y;
+                br
+                | let z&nbsp;=&nbsp;3 ;
+                br
+                br
+                | /* ---- Shorthand ---- */
+                br
+                | let&nbsp;x,&nbsp;y,&nbsp;z&nbsp;=&nbsp;3 ;
+
+    script(src='./assets/js/app.js')
+    script codeColor()
