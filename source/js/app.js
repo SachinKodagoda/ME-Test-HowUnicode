@@ -501,7 +501,7 @@ function codeColorize(x, lang, theme) {
       words = ["abstract","arguments","boolean","break","byte","case","catch","char","class","const","continue","debugger","default","delete",
       "do","double","else","enum","eval","event","export","extends","false","final","finally","float","for","function","goto","if","implements","import",
       "in","instanceof","int","interface","let","long","NaN","native","new","null","package","private","protected","public","return","short","static",
-      "super","switch","synchronized","this","throw","throws","transient","true","try","typeof","var","void","volatile","while","with","yield"];
+      "super","switch","synchronized","this","throw","throws","transient","true","try","typeof","var","void","volatile","while","with","yield","forEach","console.log","of"];
     } else if (typ == "java") {
       words = ["abstract","arguments","boolean","break","byte","case","catch","char","class","const","continue","debugger","default","delete",
       "do","double","else","enum","eval","event","export","extends","false","final","finally","float","for","function","goto","if","implements","import",
@@ -590,12 +590,12 @@ function codeColorize(x, lang, theme) {
 
 $(function(){
 
-  $(".code_body").click(function() {
-    $(this).addClass("code_active");
+  $(".code").click(function() {
+    $(this).find(".code_body").addClass("code_active");
   });
 
-  $(".code_body").mouseleave(function() {
-    $(this).removeClass("code_active");
+  $(".code").mouseleave(function() {
+    $(this).find(".code_body").removeClass("code_active");
   });
 
 });

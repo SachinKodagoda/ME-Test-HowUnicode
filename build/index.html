@@ -21,24 +21,114 @@
         <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
-              <div class="code_title">The Ternary Operator</div>
-              <div class="code_body jsHigh">/* ---- Longhand ---- */<br>const&nbsp;x&nbsp;=&nbsp;20 ;<br>let&nbsp;answer ;<br>if&nbsp;(x&nbsp;>&nbsp;10)&nbsp;{<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'greater than 10' ;<br>} else {<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'less than 10' ;<br>}<br><br>/* ---- Shorthand ---- */<br>const&nbsp;answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10&nbsp;? 'greater than 10' : 'less than 10' ;</div>
+              <div class="code_title">1. The Ternary Operator</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>const&nbsp;x&nbsp;=&nbsp;20 ;<br>let&nbsp;answer ;<br>if&nbsp;(x&nbsp;>&nbsp;10)&nbsp;{<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'greater than 10' ;<br>} else {<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'less than 10' ;<br>}<br><br>/* ----Shorthand---- */<br>const&nbsp;answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10&nbsp;? 'greater than 10' : 'less than 10' ;</div>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
-              <div class="code_title">Short-circuit Evaluation</div>
-              <div class="code_body jsHigh">/* ---- Longhand ---- */<br>if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'') {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;v1;<br>} else {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;'new'<br>}<br><br>/* ---- Shorthand ---- */<br>let&nbsp;v2&nbsp;=&nbsp;v1&nbsp;||&nbsp;'new';</div>
+              <div class="code_title">2. Short-circuit Evaluation</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'') {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;v1 ;<br>} else {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;'new'<br>}<br><br>/* ----Shorthand---- */<br>let&nbsp;v2&nbsp;=&nbsp;v1&nbsp;||&nbsp;'new' ;
+                <hr>/* ----Longhand---- */<br>let dbHost;<br>if&nbsp;(process.env.DB_HOST) {<br>&nbsp; &nbsp; dbHost&nbsp;=&nbsp;process.env.DB_HOST ;<br>} else {<br>&nbsp; &nbsp; dbHost&nbsp;=&nbsp;'localhost' ;<br>}<br><br>/* ----Shorthand---- */<br>const&nbsp;dbHost&nbsp;=&nbsp;process.env.DB_HOST || 'localhost' ;
+              </div>
             </div>
           </div>
         </div>
         <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
-              <div class="code_title">Declaring Variables</div>
-              <div class="code_body jsHigh">/* ---- Longhand ---- */<br>let x;<br>let y;<br>let z&nbsp;=&nbsp;3 ;<br><br>/* ---- Shorthand ---- */<br>let&nbsp;x,&nbsp;y,&nbsp;z&nbsp;=&nbsp;3 ;</div>
+              <div class="code_title">3. Declaring Variables</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>let x ;<br>let y ;<br>let z&nbsp;=&nbsp;3 ;<br><br>/* ----Shorthand---- */<br>let&nbsp;x,&nbsp;y,&nbsp;z&nbsp;=&nbsp;3 ;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ex_padding">
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title">4. If Presence</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>if&nbsp;( variable1&nbsp;===&nbsp;true ) { }<br><br>/* ----Shorthand---- */<br>if&nbsp;( variable1 )
+                <hr>/* ----Longhand---- */<br>if&nbsp;( variable2&nbsp;!==&nbsp;true ) { }<br><br>/* ----Shorthand---- */<br>if&nbsp;( !variable2 )
+              </div>
+              <div class="note"><span class="note_tag">Note:</span> above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are<a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"> truthy</a> value.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 5. JavaScript for Loop</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>for&nbsp;(let&nbsp;i&nbsp;=&nbsp;0; i&nbsp;<&nbsp;arr.length; i++)<br><br>/* ----Shorthand---- */<br>for&nbsp;(let&nbsp;index&nbsp;of&nbsp;arr)
+                <hr>/* ----Shorthand for Array.forEach---- */<br>function logArrayElements( element, index, array ) {<br>&nbsp;&nbsp;console.log( " a[ " + index + " ] = " + element) ;<br>}<br>[2, 5, 9].forEach(logArrayElements) ;<br><br>// logs:<br>// a[0] = 2<br>// a[1] = 5<br>// a[2] = 9
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 6. Decimal base exponents</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;10000 ; i++ ) { }<br><br>/* ----Shorthand---- */<br>for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;1e4 ; i++ ) { }
+                <hr>// All the below will evaluate to true<br>// 1e0 === 1 ;<br>// 1e1 === 10 ;<br>// 1e2 === 100 ;<br>// 1e3 === 1000 ;<br>// 1e4 === 10000 ;<br>// 1e5 === 100000 ;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ex_padding">
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title">7. Object Property</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>const obj&nbsp;=&nbsp;{ x:x, y:y } ;<br><br>/* ----Shorthand---- */<br>const obj&nbsp;=&nbsp;{ x, y } ;</div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 5. JavaScript for Loop</div>
+              <div class="code_body jsHigh">/* ----Longhand---- */<br>function sayHello (name) {<br>&nbsp;&nbsp; console.log&nbsp;('Hello:', name) ;<br>}<br><br>/* ----Shorthand---- */<br>sayHello = name&nbsp;=>&nbsp;console.log&nbsp;('Hello:', name) ;
+                <hr>/* ----Longhand---- */<br>setTimeout(function() {<br>&nbsp;&nbsp; console.log&nbsp;('Loaded')<br>}, 2000) ;<br><br>/* ----Shorthand---- */<br>setTimeout(()&nbsp;=>&nbsp;console.log&nbsp;('Loaded'), 2000) ;
+                <hr>/* ----Longhand---- */<br>list.forEach(function(item) {<br>&nbsp;&nbsp; console.log(item) ;<br>}) ;<br><br>/* ----Shorthand---- */<br>list.forEach(item&nbsp;=>&nbsp;console.log&nbsp;(item));
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 5. JavaScript for Loop</div>
+              <div class="code_body jsHigh"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ex_padding">
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title">4. If Presence</div>
+              <div class="code_body jsHigh"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 5. JavaScript for Loop</div>
+              <div class="code_body jsHigh"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_title"> 5. JavaScript for Loop</div>
+              <div class="code_body jsHigh"></div>
             </div>
           </div>
         </div>
