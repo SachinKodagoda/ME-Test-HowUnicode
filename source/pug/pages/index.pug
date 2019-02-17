@@ -10,14 +10,14 @@ html(lang='en')
           .card
             .code
               .code_title 1. The Ternary Operator
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | const&nbsp;x&nbsp;=&nbsp;20 ;
                 br
                 | let&nbsp;answer ;
                 br
-                | if&nbsp;(x&nbsp;>&nbsp;10)&nbsp;{
+                | if&nbsp;( x&nbsp;>&nbsp;10 )&nbsp;{
                 br
                 | &nbsp; &nbsp; answer&nbsp;=&nbsp;'greater than 10' ;
                 br
@@ -35,16 +35,16 @@ html(lang='en')
           .card
             .code
               .code_title 2. Short-circuit Evaluation
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
-                | if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'') {
+                | if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'' ) {
                 br
                 | &nbsp; &nbsp; v2&nbsp;=&nbsp;v1 ;
                 br
                 | } else {
                 br
-                | &nbsp; &nbsp; v2&nbsp;=&nbsp;'new'
+                | &nbsp; &nbsp; v2&nbsp;=&nbsp;'new' ;
                 br
                 | }
                 br
@@ -57,7 +57,7 @@ html(lang='en')
                 br
                 | let dbHost;
                 br
-                | if&nbsp;(process.env.DB_HOST) {
+                | if&nbsp;( process.env.DB_HOST ) {
                 br
                 | &nbsp; &nbsp; dbHost&nbsp;=&nbsp;process.env.DB_HOST ;
                 br
@@ -75,7 +75,7 @@ html(lang='en')
           .card
             .code
               .code_title 3. Declaring Variables
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | let x ;
@@ -93,7 +93,7 @@ html(lang='en')
           .card
             .code
               .code_title 4. If Presence
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | if&nbsp;( variable1&nbsp;===&nbsp;true ) { }
@@ -101,7 +101,7 @@ html(lang='en')
                 br
                 | /* ----Shorthand---- */
                 br
-                | if&nbsp;( variable1 )
+                | if&nbsp;( variable1 ) { }
                 hr
                 | /* ----Longhand---- */
                 br
@@ -110,35 +110,35 @@ html(lang='en')
                 br
                 | /* ----Shorthand---- */
                 br
-                | if&nbsp;( !variable2 )
+                | if&nbsp;( !variable2 ) { }
               .note
                 span.note_tag Note:
-                |  above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are
+                |  Above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are
                 a.link(href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy")  truthy
                 |  value.
         .col.s12.m6.l4.ex_padding
           .card
             .code
               .code_title  5. JavaScript for Loop
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
-                | for&nbsp;(let&nbsp;i&nbsp;=&nbsp;0; i&nbsp;<&nbsp;arr.length; i++)
+                | for&nbsp;( let&nbsp;i&nbsp;=&nbsp;0; i&nbsp;<&nbsp;arr.length; i++ ) { }
                 br
                 br
                 | /* ----Shorthand---- */
                 br
-                | for&nbsp;(let&nbsp;index&nbsp;of&nbsp;arr)
+                | for&nbsp;( let&nbsp;index&nbsp;of&nbsp;arr ) { }
                 hr
                 | /* ----Shorthand for Array.forEach---- */
                 br
-                | function logArrayElements( element, index, array ) {
+                | function logArrayElements ( element, index, array ) {
                 br
                 | &nbsp;&nbsp;console.log( " a[ " + index + " ] = " + element) ;
                 br
                 | }
                 br
-                | [2, 5, 9].forEach(logArrayElements) ;
+                | [2, 5, 9].forEach ( logArrayElements ) ;
                 br
                 br
                 | // logs:
@@ -152,7 +152,7 @@ html(lang='en')
           .card
             .code
               .code_title  6. Decimal base exponents
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;10000 ; i++ ) { }
@@ -180,7 +180,7 @@ html(lang='en')
           .card
             .code
               .code_title 7. Object Property
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | const obj&nbsp;=&nbsp;{ x:x, y:y } ;
@@ -192,66 +192,104 @@ html(lang='en')
         .col.s12.m6.l4.ex_padding
           .card
             .code
-              .code_title  5. JavaScript for Loop
-              .code_body.jsHigh
+              .code_title  8. Arrow Functions
+              .code_body.jsHigh.round_bottom_border
                 | /* ----Longhand---- */
                 br
                 | function sayHello (name) {
                 br
-                | &nbsp;&nbsp; console.log&nbsp;('Hello:', name) ;
+                | &nbsp;&nbsp; console.log&nbsp;( 'Hello:', name ) ;
                 br
                 | }
                 br
                 br
                 | /* ----Shorthand---- */
                 br
-                | sayHello = name&nbsp;=>&nbsp;console.log&nbsp;('Hello:', name) ;
+                | sayHello = name&nbsp;=>&nbsp;console.log&nbsp;( 'Hello:', name ) ;
                 hr
                 | /* ----Longhand---- */
                 br
-                | setTimeout(function() {
+                | setTimeout ( function( ) {
                 br
-                | &nbsp;&nbsp; console.log&nbsp;('Loaded')
+                | &nbsp;&nbsp; console.log&nbsp;( 'Loaded' )
                 br
                 | }, 2000) ;
                 br
                 br
                 | /* ----Shorthand---- */
                 br
-                | setTimeout(()&nbsp;=>&nbsp;console.log&nbsp;('Loaded'), 2000) ;
+                | setTimeout ( ( )&nbsp;=>&nbsp;console.log&nbsp;( 'Loaded' ), 2000 ) ;
                 hr
                 | /* ----Longhand---- */
                 br
-                | list.forEach(function(item) {
+                | list.forEach ( function ( item ) {
                 br
-                | &nbsp;&nbsp; console.log(item) ;
+                | &nbsp;&nbsp; console.log ( item ) ;
                 br
                 | }) ;
                 br
                 br
                 | /* ----Shorthand---- */
                 br
-                | list.forEach(item&nbsp;=>&nbsp;console.log&nbsp;(item));
+                | list.forEach ( item&nbsp;=>&nbsp;console.log&nbsp;(&nbsp;item&nbsp;) ) ;
+              .note
+                span.note_tag Note:
+                |  The value of
+                span.highlight_word  "this"
+                |  inside an arrow function is determined differently, so the examples are not strictly equivalent.
         .col.s12.m6.l4.ex_padding
           .card
             .code
-              .code_title  5. JavaScript for Loop
-              .code_body.jsHigh
+              .code_title  9. Implicit Return
+              .code_body.jsHigh.round_bottom_border
+                | /* ----Longhand---- */
+                br
+                | function&nbsp;calcCircumference&nbsp;(diameter) {
+                br
+                | &nbsp;&nbsp; return Math.PI * diameter ;
+                br
+                | }
+                br
+                br
+                | /* ----Shorthand---- */
+                br
+                | calcCircumference =&nbsp;diameter&nbsp;=>&nbsp;(
+                br
+                | &nbsp;&nbsp; Math.PI * diameter ;
+                br
+                | )
       .row.ex_padding
         .col.s12.m6.l4.ex_padding
           .card
             .code
-              .code_title 4. If Presence
+              .code_title 10. Default Parameter Values
+              .code_body_subtitle Longhand
               .code_body.jsHigh
+                | function volume ( l, w, h ) {
+                br
+                | &nbsp;&nbsp; if ( w === undefined )
+                br
+                | &nbsp;&nbsp;&nbsp;&nbsp; w = 3 ;
+                br
+                | &nbsp;&nbsp; if ( h === undefined )
+                br
+                | &nbsp;&nbsp;&nbsp;&nbsp; h = 4 ;
+                br
+                | &nbsp;&nbsp; return l * w * h ;
+                br
+                | }
+              .code_body_subtitle Longhand
+              .code_body.jsHigh.round_bottom_border
+                | volume = ( l, w&nbsp;=&nbsp;3, h&nbsp;=&nbsp;4 )&nbsp;=> (&nbsp;l&nbsp;*&nbsp;w&nbsp;*&nbsp;h&nbsp;) ;
         .col.s12.m6.l4.ex_padding
           .card
             .code
               .code_title  5. JavaScript for Loop
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
         .col.s12.m6.l4.ex_padding
           .card
             .code
               .code_title  5. JavaScript for Loop
-              .code_body.jsHigh
+              .code_body.jsHigh.round_bottom_border
     script(src='./assets/js/app.js')
     script codeColor()

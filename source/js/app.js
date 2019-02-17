@@ -501,7 +501,7 @@ function codeColorize(x, lang, theme) {
       words = ["abstract","arguments","boolean","break","byte","case","catch","char","class","const","continue","debugger","default","delete",
       "do","double","else","enum","eval","event","export","extends","false","final","finally","float","for","function","goto","if","implements","import",
       "in","instanceof","int","interface","let","long","NaN","native","new","null","package","private","protected","public","return","short","static",
-      "super","switch","synchronized","this","throw","throws","transient","true","try","typeof","var","void","volatile","while","with","yield","forEach","console.log","of"];
+      "super","switch","synchronized","this","throw","throws","transient","true","try","typeof","var","void","volatile","while","with","yield","forEach","console.log","of", "Math", "PI"];
     } else if (typ == "java") {
       words = ["abstract","arguments","boolean","break","byte","case","catch","char","class","const","continue","debugger","default","delete",
       "do","double","else","enum","eval","event","export","extends","false","final","finally","float","for","function","goto","if","implements","import",
