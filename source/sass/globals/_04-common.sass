@@ -5,8 +5,8 @@
 
 .card
     box-shadow: inset $box-shadow
-    // background: #ccc
-    background: #f5f5f5
+    background: #ccc
+    // background: #DFDFDF
     border-radius: 10px
 
 .ex_padding
@@ -44,18 +44,28 @@
         border-left: 4px solid #2F0048
         border-right: 4px solid #2F0048
         white-space: normal
-        box-shadow: 0 4px 10px 0 rgba(0,0,0,.2)
+        // box-shadow: 0 4px 10px 0 rgba(0,0,0,.2)
         // border-radius: 0 0 10px 10px
         overflow: auto
     &_body_subtitle
-        background: #2D3047
-        color: #fff
+        // background: #1F0030
+        // color: #fff
+        background: #f2f2f2
+        color: #000000
+        // width: calc(100% - 2px)
+        width: 100%
         text-align: center
+        margin: auto
         border-left: 4px solid #2F0048
         border-right: 4px solid #2F0048
+        // border-top: 1px solid #2F0048
+        // border-bottom: 1px solid #2F0048
         font-size: 16px
         height: 30px
         line-height: 30px
+    &_body_cover
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,.2)
+        border-radius: 10px
 
 .code_active
     white-space: nowrap
@@ -76,3 +86,10 @@
 .round_bottom_border
     border-radius: 0 0 10px 10px
     border-bottom: 4px solid #2F0048
+
+.breaker
+    border-top: 4px dashed #2F0048
+    border-left: 4px solid #2F0048
+    border-right: 4px solid #2F0048
+    background: #fff
+    height: 5px
