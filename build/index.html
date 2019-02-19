@@ -17,25 +17,26 @@
   <body>
     <div class="wrapper">
       <div class="topic">JavaScript (ES6 and Beyond) Cheat Sheet</div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
+      <div class="topic_desc"><span class="topic_link">EcmaScript (ES)</span> is the standardised scripting language for<span class="topic_link">JavaScript (JS).</span> The current ES version supported in modern browsers is ES5.
+        However, ES6 tackles a lot of the limitations of the core language, making it easier for developers to code.
+      </div>
+      <div class="row_flex">
+        <div class="col_flex">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">1. The Ternary Operator</div>
+                <div class="code_title">The Ternary Operator</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const&nbsp;x&nbsp;=&nbsp;20 ;<br>let&nbsp;answer ;<br>if&nbsp;( x&nbsp;>&nbsp;10 )&nbsp;{<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'greater than 10' ;<br>} else {<br>&nbsp; &nbsp; answer&nbsp;=&nbsp;'less than 10' ;<br>}<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
-                <div class="code_body jsHigh round_bottom_border">const&nbsp;answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10&nbsp;? 'greater than 10' : 'less than 10' ;</div>
+                <div class="code_body jsHigh round_bottom_border">answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10&nbsp;? 'greater than 10' : 'less than 10' ;<br>/* If you want to pass x value then do like this */<br>answer&nbsp;=&nbsp;x&nbsp;>&nbsp;10 ? 'greater than 10' : x ;</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">2. Short-circuit Evaluation</div>
+                <div class="code_title">Short-circuit Evaluation</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">if ( v1&nbsp;!==&nbsp;null&nbsp;|| v1&nbsp;!==&nbsp;undefined&nbsp;|| v1&nbsp;!==&nbsp;'' ) {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;v1 ;<br>} else {<br>&nbsp; &nbsp; v2&nbsp;=&nbsp;'new' ;<br>}<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -48,12 +49,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">3. Declaring Variables</div>
+                <div class="code_title">Declaring Variables</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">let x ;<br>let y ;<br>let z&nbsp;=&nbsp;3 ;<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -61,14 +60,10 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">4. If Presence</div>
+                <div class="code_title">If Presence</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">if&nbsp;( variable1&nbsp;===&nbsp;true ) { }<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -78,18 +73,16 @@
                 <div class="code_body jsHigh">if&nbsp;( variable2&nbsp;!==&nbsp;true ) { }<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
                 <div class="code_body jsHigh round_bottom_border">if&nbsp;( !variable2 ) { }</div>
-                <div class="note"><span class="note_tag">NOTE:</span> Above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are<a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"> truthy</a> value.</div>
+                <div class="note"><span class="note_tag">NOTE:</span> Above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are<a class="highlight_word" href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"> truthy</a> value.</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 5. JavaScript for Loop</div>
+                <div class="code_title">JavaScript for Loop</div>
                 <div class="code_body_subtitle">Longhand</div>
-                <div class="code_body jsHigh">for&nbsp;( let&nbsp;i&nbsp;=&nbsp;0; i&nbsp;<&nbsp;arr.length; i++ ) { }<br></div>
+                <div class="code_body jsHigh">for&nbsp;( let&nbsp;i&nbsp;=&nbsp;0&nbsp;; i&nbsp;<&nbsp;arr.length&nbsp;; i++ ) { }<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
                 <div class="code_body jsHigh">for&nbsp;( let&nbsp;index&nbsp;of&nbsp;arr ) { }<br></div>
                 <div class="breaker"></div>
@@ -98,42 +91,37 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 6. Decimal base exponents</div>
+                <div class="code_title">Decimal base exponents</div>
                 <div class="code_body_subtitle">Longhand</div>
-                <div class="code_body jsHigh">for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;10000 ; i++ ) { }<br></div>
+                <div class="code_body jsHigh">for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;10 ; i++ ) {<br>&nbsp;&nbsp; console.log ( i ) ;<br>}</div>
                 <div class="code_body_subtitle">Shorthand</div>
-                <div class="code_body jsHigh round_bottom_border">for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;1e4 ; i++ ) { }
-                  <hr>// All the below will evaluate to true<br>// 1e0 === 1 ;<br>// 1e1 === 10 ;<br>// 1e2 === 100 ;<br>// 1e3 === 1000 ;<br>// 1e4 === 10000 ;<br>// 1e5 === 100000 ;
-                </div>
+                <div class="code_body jsHigh round_bottom_border">for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;1e1 ; i++ ) {<br>&nbsp;&nbsp; console.log ( i ) ;<br>}</div>
+                <div class="note">&nbsp;&nbsp;&nbsp;&nbsp;/* All the below will evaluate to true */<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e0 === 1 ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e1 === 10 ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e2 === 100 ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e3 === 1000 ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e4 === 10000 ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1e5 === 100000 ;</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
+        <div class="col_flex">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">7. Object Property</div>
-                <div class="code_body_subtitle">Longhand</div>
-                <div class="code_body jsHigh">const obj&nbsp;=&nbsp;{ x:x, y:y } ;<br></div>
-                <div class="code_body_subtitle">Shorthand</div>
-                <div class="code_body jsHigh round_bottom_border">const obj&nbsp;=&nbsp;{ x, y } ;</div>
+                <div class="code_title">Object Property</div>
+                <div class="code_body_subtitle">ES5</div>
+                <div class="code_body jsHigh">var x = 5, y = 6 ;<br>var obj&nbsp;=&nbsp;{ x : x, y : y } ;<br>console.log ( obj.x ) ;</div>
+                <div class="console">// console: 5</div>
+                <div class="code_body_subtitle">ES6</div>
+                <div class="code_body jsHigh">let x = 5, y = 6;<br>const obj&nbsp;=&nbsp;{ x, y } ;<br>console.log ( obj.x ) ;</div>
+                <div class="console round_bottom_border">// console: 5</div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 8. Arrow Functions</div>
+                <div class="code_title">Arrow Functions</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">function sayHello (name) {<br>&nbsp;&nbsp; console.log&nbsp;( 'Hello:', name ) ;<br>}<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -152,12 +140,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">9. Implicit Return</div>
+                <div class="code_title">Implicit Return</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">function&nbsp;calcCircumference&nbsp;(diameter) {<br>&nbsp;&nbsp; return Math.PI * diameter ;<br>}<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -165,14 +151,10 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title">10. Default Parameter Values</div>
+                <div class="code_title">Default Parameter Values</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">function volume ( l, w, h ) {<br>&nbsp;&nbsp; if ( w === undefined )<br>&nbsp;&nbsp;&nbsp;&nbsp; w = 3 ;<br>&nbsp;&nbsp; if ( h === undefined )<br>&nbsp;&nbsp;&nbsp;&nbsp; h = 4 ;<br>&nbsp;&nbsp; return l * w * h ;<br>}</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -180,12 +162,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 11. JavaScript for Loop</div>
+                <div class="code_title">Template Literals</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const db = 'http://' + host + ':' + port + '/' + database ;</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -193,27 +173,14 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 12. Destructuring Assignment</div>
+                <div class="code_title">Destructuring Assignment</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const observable = require&nbsp;(&nbsp;'mobx/observable'&nbsp;)&nbsp;;<br>const action = require&nbsp;(&nbsp;'mobx/action'&nbsp;)&nbsp;;<br>const runInAction = require&nbsp;(&nbsp;'mobx/runInAction'&nbsp;)&nbsp;;</div>
                 <div class="code_body_subtitle">Shorthand</div>
-                <div class="code_body jsHigh round_bottom_border">import { observable, action, runInAction } from 'mobx' ;</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
-          <div class="card">
-            <div class="code">
-              <div class="code_body_cover">
-                <div class="code_title"> 13. Destructuring Assignment</div>
+                <div class="code_body jsHigh">import { observable, action, runInAction } from 'mobx' ;</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const store = this.props.store ;<br>const form = this.props.form ;<br>const loading = this.props.loading ;<br>const errors = this.props.errors ;<br>const entity = this.props.entity ;</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -222,11 +189,11 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m6 l4 ex_padding">
+        <div class="col_flex">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 14. Multi-line String</div>
+                <div class="code_title">Multi-line String</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const lorem = 'Lorem ipsum \n\t'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'adipisicing elit \n\t'</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -234,35 +201,29 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 15. Spread Operator</div>
+                <div class="code_title">Spread Operator</div>
                 <div class="code_body_subtitle">Longhand of joining arrays</div>
                 <div class="code_body jsHigh">const odd = [ 1, 3, 5 ] ;<br>const nums = [ 2, 4, 6 ].concat ( odd ) ;</div>
                 <div class="code_body_subtitle">Shorthand of joining arrays</div>
-                <div class="code_body jsHigh">const odd = [ 1, 3, 5 ] ;<br>const nums = [ 2, ...odd, 4, 6 ] ;<br>console.log ( nums ) ; // [ 2, 1, 3, 5, 4, 6]</div>
+                <div class="code_body jsHigh">const odd = [ 1, 3, 5 ] ;<br>const nums = [ 2, ...odd, 4, 6 ] ;<br>console.log ( nums ) ;<br>// [ 2, 1, 3, 5, 4, 6]</div>
                 <div class="breaker"></div>
                 <div class="code_body_subtitle">Longhand of cloning arrays</div>
                 <div class="code_body jsHigh">const arr = [ 1, 2, 3, 4 ] ;<br>const arr2 = arr.slice ( ) ;</div>
                 <div class="code_body_subtitle">Shorthan of cloning arrays</div>
                 <div class="code_body jsHigh">const arr = [ 1, 2, 3, 4 ] ;<br>const arr2 = [ ...arr ] ;</div>
                 <div class="breaker"></div>
-                <div class="code_body_subtitle">spread operator with destructuring notation</div>
+                <div class="code_body_subtitle">With destructuring notation</div>
                 <div class="code_body jsHigh round_bottom_border">const { a, b, ...z } = { a: 1, b: 2, c: 3, d: 4 };<br>console.log ( a ) // 1<br>console.log ( b ) // 2<br>console.log ( z ) // { c: 3, d: 4 }</div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row ex_padding">
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 16. Mandatory Parameter</div>
+                <div class="code_title">Mandatory Parameter</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">function foo ( bar ) {<br>&nbsp;&nbsp; if ( bar === undefined ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error (&nbsp;'Missing&nbsp;parameter!'&nbsp;)&nbsp;;<br>&nbsp;&nbsp; }<br>&nbsp;&nbsp; return bar;<br>}</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -276,12 +237,10 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 17. Destructuring Assignment</div>
+                <div class="code_title">Destructuring Assignment</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const pets = [<br>  { type: 'Dog', name: 'Max' },<br>  { type: 'Cat', name: 'Karl' },<br>  { type: 'Dog', name: 'Tommy' },<br>]<br><br>function findDog ( name ) {<br>&nbsp;&nbsp; for ( let i = 0; i < pets.length ; ++i ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; if ( pets[i].type&nbsp;===&nbsp;'Dog' && pets[i].name&nbsp;===&nbsp;name&nbsp;) {<br>&nbsp;&nbsp;&nbsp;&nbsp; return pets[i] ;<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp; }<br>}</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -289,16 +248,25 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 18. Destructuring Assignment</div>
+                <div class="code_title">Destructuring Assignment</div>
                 <div class="code_body_subtitle">Longhand</div>
-                <div class="code_body jsHigh">function validate(values) {<br>&nbsp;&nbsp; if ( !values.first )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; if( !values.last )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; return true;<br>}<br>console.log ( validate ( { first:'Bruce', last:'Wayne' } ) ) ;<br>// true</div>
+                <div class="code_body jsHigh">function validate(values) {<br>&nbsp;&nbsp; if ( !values.first )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; if( !values.last )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; return true;<br>}<br>console.log ( validate ( { first : 'Bruce', last : 'Wayne' } ) ) ;<br>// true</div>
                 <div class="code_body_subtitle">Shorthand</div>
-                <div class="code_body jsHigh round_bottom_border">// object validation rules<br>const schema = {<br>  first: {<br>    required:true<br>  },<br>  last: {<br>    required:true<br>  }<br>}<br>// universal validation function<br>const validate = ( schema, values ) => {<br>&nbsp;&nbsp; for ( field in schema ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; if ( schema[field].required ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( !values[field] ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; return true;<br>&nbsp;&nbsp; }<br>console.log ( validate ( schema, {first:'Bruce'} ) ); // false<br>console.log ( validate ( schema, {first:'Bruce',last:'Wayne'} ) ); // true</div>
+                <div class="code_body jsHigh round_bottom_border">// object validation rules<br>const schema = {<br>&nbsp;&nbsp; first: {<br>&nbsp;&nbsp;&nbsp;&nbsp; required : true<br>&nbsp;&nbsp; },<br>&nbsp;&nbsp; last: {<br>&nbsp;&nbsp;&nbsp;&nbsp; required : true<br>&nbsp;&nbsp; }<br>}<br>// universal validation function<br>const validate = ( schema, values ) => {<br>&nbsp;&nbsp; for ( field in schema ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; if ( schema[field].required ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( !values[field] ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp; return true;<br>&nbsp;}<br>console.log ( validate ( schema, { first : 'Bruce' } ) );<br>console.log ( validate ( schema, { first : 'Bruce' , last : 'Wayne' } ) );</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="code">
+              <div class="code_body_cover">
+                <div class="code_title">Double Bitwise NOT</div>
+                <div class="code_body_subtitle">Longhand</div>
+                <div class="code_body jsHigh">Math.floor ( 4.9 )&nbsp;===&nbsp;4  //true</div>
+                <div class="code_body_subtitle">Shorthand</div>
+                <div class="code_body jsHigh round_bottom_border">~~4.9&nbsp;===&nbsp;4  //true</div>
               </div>
             </div>
           </div>
