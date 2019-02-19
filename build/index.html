@@ -78,7 +78,7 @@
                 <div class="code_body jsHigh">if&nbsp;( variable2&nbsp;!==&nbsp;true ) { }<br></div>
                 <div class="code_body_subtitle">Shorthand</div>
                 <div class="code_body jsHigh round_bottom_border">if&nbsp;( !variable2 ) { }</div>
-                <div class="note"><span class="note_tag">Note:</span> Above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are<a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"> truthy</a> value.</div>
+                <div class="note"><span class="note_tag">NOTE:</span> Above examples, Longhand methods and Shorthand methods are not exactly equal, as the shorthand methods will pass as long as variable1/variable2 are<a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"> truthy</a> value.</div>
               </div>
             </div>
           </div>
@@ -207,11 +207,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row ex_padding">
         <div class="col s12 m6 l4 ex_padding">
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 12. Destructuring Assignment</div>
+                <div class="code_title"> 13. Destructuring Assignment</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const store = this.props.store ;<br>const form = this.props.form ;<br>const loading = this.props.loading ;<br>const errors = this.props.errors ;<br>const entity = this.props.entity ;</div>
                 <div class="code_body_subtitle">Shorthand</div>
@@ -224,11 +226,79 @@
           <div class="card">
             <div class="code">
               <div class="code_body_cover">
-                <div class="code_title"> 12. Multi-line String</div>
+                <div class="code_title"> 14. Multi-line String</div>
                 <div class="code_body_subtitle">Longhand</div>
                 <div class="code_body jsHigh">const lorem = 'Lorem ipsum \n\t'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'adipisicing elit \n\t'</div>
                 <div class="code_body_subtitle">Shorthand</div>
                 <div class="code_body jsHigh round_bottom_border">// backticks can be used<br>const lorem = `Lorem ipsum<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adipisicing elit`</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_body_cover">
+                <div class="code_title"> 15. Spread Operator</div>
+                <div class="code_body_subtitle">Longhand of joining arrays</div>
+                <div class="code_body jsHigh">const odd = [ 1, 3, 5 ] ;<br>const nums = [ 2, 4, 6 ].concat ( odd ) ;</div>
+                <div class="code_body_subtitle">Shorthand of joining arrays</div>
+                <div class="code_body jsHigh">const odd = [ 1, 3, 5 ] ;<br>const nums = [ 2, ...odd, 4, 6 ] ;<br>console.log ( nums ) ; // [ 2, 1, 3, 5, 4, 6]</div>
+                <div class="breaker"></div>
+                <div class="code_body_subtitle">Longhand of cloning arrays</div>
+                <div class="code_body jsHigh">const arr = [ 1, 2, 3, 4 ] ;<br>const arr2 = arr.slice ( ) ;</div>
+                <div class="code_body_subtitle">Shorthan of cloning arrays</div>
+                <div class="code_body jsHigh">const arr = [ 1, 2, 3, 4 ] ;<br>const arr2 = [ ...arr ] ;</div>
+                <div class="breaker"></div>
+                <div class="code_body_subtitle">spread operator with destructuring notation</div>
+                <div class="code_body jsHigh round_bottom_border">const { a, b, ...z } = { a: 1, b: 2, c: 3, d: 4 };<br>console.log ( a ) // 1<br>console.log ( b ) // 2<br>console.log ( z ) // { c: 3, d: 4 }</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ex_padding">
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_body_cover">
+                <div class="code_title"> 16. Mandatory Parameter</div>
+                <div class="code_body_subtitle">Longhand</div>
+                <div class="code_body jsHigh">function foo ( bar ) {<br>&nbsp;&nbsp; if ( bar === undefined ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Error (&nbsp;'Missing&nbsp;parameter!'&nbsp;)&nbsp;;<br>&nbsp;&nbsp; }<br>&nbsp;&nbsp; return bar;<br>}</div>
+                <div class="code_body_subtitle">Shorthand</div>
+                <div class="code_body jsHigh round_bottom_border">const mandatory = ( ) => {<br>&nbsp;&nbsp; throw new Error (&nbsp;'Missing&nbsp;parameter!'&nbsp;)&nbsp;;<br>}<br><br>const foo = ( bar = mandatory ( ) ) => {<br>&nbsp;&nbsp; return bar;<br>}</div>
+                <div class="note"><span class="note_tag">NOTE:</span> By default, JavaScript will set function parameters to undefined if they are not passed a value.
+                  Some other languages will throw a warning or error.
+                  To enforce parameter assignment,
+                  you can use an if statement to throw an error if undefined,
+                  or you can take advantage of the ‘Mandatory parameter shorthand’.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_body_cover">
+                <div class="code_title"> 17. Destructuring Assignment</div>
+                <div class="code_body_subtitle">Longhand</div>
+                <div class="code_body jsHigh">const pets = [<br>  { type: 'Dog', name: 'Max' },<br>  { type: 'Cat', name: 'Karl' },<br>  { type: 'Dog', name: 'Tommy' },<br>]<br><br>function findDog ( name ) {<br>&nbsp;&nbsp; for ( let i = 0; i < pets.length ; ++i ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; if ( pets[i].type&nbsp;===&nbsp;'Dog' && pets[i].name&nbsp;===&nbsp;name&nbsp;) {<br>&nbsp;&nbsp;&nbsp;&nbsp; return pets[i] ;<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp; }<br>}</div>
+                <div class="code_body_subtitle">Shorthand</div>
+                <div class="code_body jsHigh round_bottom_border">const pet = pets.find ( pet => pet.type&nbsp;===&nbsp;'Dog' && pet.name&nbsp;===&nbsp;'Tommy' ) ;<br>console.log ( pet ) ;<br>// { type: 'Dog', name: 'Tommy' }</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4 ex_padding">
+          <div class="card">
+            <div class="code">
+              <div class="code_body_cover">
+                <div class="code_title"> 18. Destructuring Assignment</div>
+                <div class="code_body_subtitle">Longhand</div>
+                <div class="code_body jsHigh">function validate(values) {<br>&nbsp;&nbsp; if ( !values.first )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; if( !values.last )<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp; return true;<br>}<br>console.log ( validate ( { first:'Bruce', last:'Wayne' } ) ) ;<br>// true</div>
+                <div class="code_body_subtitle">Shorthand</div>
+                <div class="code_body jsHigh round_bottom_border">// object validation rules<br>const schema = {<br>  first: {<br>    required:true<br>  },<br>  last: {<br>    required:true<br>  }<br>}<br>// universal validation function<br>const validate = ( schema, values ) => {<br>&nbsp;&nbsp; for ( field in schema ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; if ( schema[field].required ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( !values[field] ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp; return true;<br>&nbsp;&nbsp; }<br>console.log ( validate ( schema, {first:'Bruce'} ) ); // false<br>console.log ( validate ( schema, {first:'Bruce',last:'Wayne'} ) ); // true</div>
               </div>
             </div>
           </div>
