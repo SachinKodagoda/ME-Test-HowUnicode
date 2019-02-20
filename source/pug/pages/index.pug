@@ -63,7 +63,6 @@ html(lang='en')
                   | }
                   br
                   | console.log ( answer ) ;
-                .console // console: greater than 10
                 .code_body_subtitle Shorthand ( ES5 )
                 .code_body.jsHigh
                   | var x = 20 ;
@@ -99,7 +98,6 @@ html(lang='en')
                   | }
                   br
                   | console.log ( v2 ) ;
-                .console // console: no value
                 .code_body_subtitle Shorthand ( ES5 )
                 .code_body.jsHigh
                   | var v1 ;
@@ -126,7 +124,6 @@ html(lang='en')
                   | &nbsp;&nbsp; console.log ( "No" ) ;
                   br
                   | }
-                .console // console: Yes
                 .code_body_subtitle Shorthand ( ES5 )
                 .code_body.jsHigh
                   | var v1 = true ;
@@ -150,8 +147,6 @@ html(lang='en')
                   br
                   | &nbsp;&nbsp; console.log ( "Hi" ) ;
                   br
-                  | }
-                .console // console: Hi
                 .code_body_subtitle Shorthand ( ES5 )
                 .code_body.jsHigh
                   | var v2 = false ;
@@ -172,51 +167,67 @@ html(lang='en')
             .code
               .code_body_cover
                 .code_title JavaScript for Loop
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
-                  | for&nbsp;( let&nbsp;i&nbsp;=&nbsp;0&nbsp;; i&nbsp;<&nbsp;arr.length&nbsp;; i++ ) { }
+                  | var&nbsp;arr&nbsp;=&nbsp;[ 1, 2, 3 ] ;
                   br
-                .code_body_subtitle Shorthand
+                  | for&nbsp;(var&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;arr.length ; i++) {
+                  br
+                  | &nbsp;&nbsp; console.log ( i ) ;
+                  br
+                  | }
+                .code_body_subtitle Shorthand ( ES6 )
                 .code_body.jsHigh
-                  | for&nbsp;( let&nbsp;index&nbsp;of&nbsp;arr ) { }
+                  | const arr = [ 1, 2, 3 ] ;
                   br
+                  | for&nbsp;( let&nbsp;index&nbsp;of&nbsp;arr ) {
+                  br
+                  | &nbsp;&nbsp; console.log ( index );
+                  br
+                  | }
+                .console // console:
+                  br
+                  | &nbsp;&nbsp;&nbsp;&nbsp;  1
+                  br
+                  | &nbsp;&nbsp;&nbsp;&nbsp;  2
+                  br
+                  | &nbsp;&nbsp;&nbsp;&nbsp;  3
                 .breaker
-                .code_body_subtitle Shorthand for Array.forEach
-                .code_body.jsHigh.round_bottom_border
+                .code_body_subtitle Shorthand for Array.forEach  ( ES5 )
+                .code_body.jsHigh
                   | function logArrayElements ( element, index, array ) {
                   br
-                  | &nbsp;&nbsp;console.log( " a[ " + index + " ] = " + element) ;
+                  | &nbsp;&nbsp; console.log( " a[ " + index + " ] = " + element) ;
                   br
                   | }
                   br
                   | [2, 5, 9].forEach ( logArrayElements ) ;
+                .console.round_bottom_border // console:
                   br
+                  | &nbsp;&nbsp; a[0] = 2
                   br
-                  | // logs:
+                  | &nbsp;&nbsp; a[1] = 5
                   br
-                  | // a[0] = 2
-                  br
-                  | // a[1] = 5
-                  br
-                  | // a[2] = 9
+                  | &nbsp;&nbsp; a[2] = 9
           .card
             .code
               .code_body_cover
                 .code_title Decimal base exponents
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;10 ; i++ ) {
                   br
                   | &nbsp;&nbsp; console.log ( i ) ;
                   br
                   | }
-                .code_body_subtitle Shorthand
-                .code_body.jsHigh.round_bottom_border
+                .code_body_subtitle Shorthand ( ES5 )
+                .code_body.jsHigh
                   | for ( let&nbsp;i&nbsp;=&nbsp;0 ; i&nbsp;<&nbsp;1e1 ; i++ ) {
                   br
                   | &nbsp;&nbsp; console.log ( i ) ;
                   br
                   | }
+                .console.round_bottom_border // console: numbers from 1 to 10
                 .note
                   | &nbsp;&nbsp;&nbsp;&nbsp;/* All the below will evaluate to true */
                   br
@@ -236,15 +247,14 @@ html(lang='en')
             .code
               .code_body_cover
                 .code_title Object Property
-                .code_body_subtitle ES5
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | var x = 5, y = 6 ;
                   br
                   | var obj&nbsp;=&nbsp;{ x : x, y : y } ;
                   br
                   | console.log ( obj.x ) ;
-                .console // console: 5
-                .code_body_subtitle ES6
+                .code_body_subtitle Shorthand ( ES6 )
                 .code_body.jsHigh
                   | let x = 5, y = 6;
                   br
@@ -256,7 +266,7 @@ html(lang='en')
             .code
               .code_body_cover
                 .code_title Arrow Functions
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | function sayHello (name) {
                   br
@@ -264,33 +274,45 @@ html(lang='en')
                   br
                   | }
                   br
-                .code_body_subtitle Shorthand
+                .code_body_subtitle Shorthand ( ES6 )
                 .code_body.jsHigh
-                  | sayHello = name&nbsp;=>&nbsp;console.log&nbsp;( 'Hello:', name ) ;
+                  | const sayHello = name&nbsp;=>&nbsp;console.log&nbsp;( 'Hello', name ) ;
+                  br
+                  | sayHello ( " Sachin " ) ;
+                .console // console: Hello Sachin
                 .breaker
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | setTimeout ( function( ) {
                   br
                   | &nbsp;&nbsp; console.log&nbsp;( 'Loaded' )
                   br
-                  | }, 2000) ;
-                  br
-                .code_body_subtitle Shorthand
+                .code_body_subtitle Shorthand ( ES6 )
                 .code_body.jsHigh
                   | setTimeout ( ( )&nbsp;=>&nbsp;console.log&nbsp;( 'Loaded' ), 2000 ) ;
+                .console // console: "Loaded" Message will show in logs after 2000ms
                 .breaker
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
+                  | var arr = [ 1, 2, 3 ] ;
+                  br
                   | list.forEach ( function ( item ) {
                   br
                   | &nbsp;&nbsp; console.log ( item ) ;
                   br
                   | }) ;
+                .code_body_subtitle Shorthand ( ES6 )
+                .code_body.jsHigh
+                  | const arr = [ 1, 2, 3 ] ;
                   br
-                .code_body_subtitle Shorthand
-                .code_body.jsHigh.round_bottom_border
-                  | list.forEach ( item&nbsp;=>&nbsp;console.log&nbsp;(&nbsp;item&nbsp;) ) ;
+                  | arr.forEach ( item&nbsp;=>&nbsp;console.log&nbsp;(&nbsp;item&nbsp;) ) ;
+                .console.round_bottom_border // console:
+                  br
+                  | &nbsp;&nbsp; 1
+                  br
+                  | &nbsp;&nbsp; 2
+                  br
+                  | &nbsp;&nbsp; 3
                 .note
                   span.note_tag Note:
                   |  The value of
@@ -300,7 +322,7 @@ html(lang='en')
             .code
               .code_body_cover
                 .code_title Implicit Return
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | function&nbsp;calcCircumference&nbsp;(diameter) {
                   br
@@ -308,18 +330,23 @@ html(lang='en')
                   br
                   | }
                   br
-                .code_body_subtitle Shorthand
-                .code_body.jsHigh.round_bottom_border
-                  | calcCircumference =&nbsp;diameter&nbsp;=>&nbsp;(
+                  | console.log ( calcCircumference ( 7 ) ) ;
+                .code_body_subtitle Shorthand ( ES6 )
+                .code_body.jsHigh
+                  | let calcCircumference =&nbsp;diameter&nbsp;=>&nbsp;(
                   br
-                  | &nbsp;&nbsp; Math.PI * diameter ;
+                  | &nbsp;&nbsp; Math.PI * diameter
                   br
-                  | )
+                  | );
+                  br
+                  | console.log ( calcCircumference ( 7 ) ) ;
+                .console.round_bottom_border // console: 21.991148575128552
+
           .card
             .code
               .code_body_cover
                 .code_title Default Parameter Values
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
                   | function volume ( l, w, h ) {
                   br
@@ -334,19 +361,31 @@ html(lang='en')
                   | &nbsp;&nbsp; return l * w * h ;
                   br
                   | }
-                .code_body_subtitle Shorthand
-                .code_body.jsHigh.round_bottom_border
+                  br
+                  | console.log ( volume ( 2 ) ) ;
+                .code_body_subtitle Shorthand ( ES6 )
+                .code_body.jsHigh
                   | volume = ( l, w&nbsp;=&nbsp;3, h&nbsp;=&nbsp;4 )&nbsp;=> (&nbsp;l&nbsp;*&nbsp;w&nbsp;*&nbsp;h&nbsp;) ;
+                  br
+                  | console.log ( volume ( 2 ) ) ;
+                .console.round_bottom_border // console: 24
           .card
             .code
               .code_body_cover
                 .code_title Template Literals
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
+                  | const host = "localhost", port = "8080", database = "mydb" ;
+                  br
                   | const db = 'http://' + host + ':' + port + '/' + database ;
-                .code_body_subtitle Shorthand
-                .code_body.jsHigh.round_bottom_border
-                  | const db = `http://${host}:${port}/${database}` ;
+                .code_body_subtitle Shorthand ( ES6 )
+                .code_body.jsHigh
+                  | const host = "localhost", port = "8080", database = "mydb" ;
+                  br
+                  | const&nbsp;db&nbsp;= `http:// ${host} : ${port} / ${database} `;
+                  br
+                  | console.log ( db ) ;
+                .console.round_bottom_border // console: http://localhost:8080/mydb
           .card
             .code
               .code_body_cover
@@ -384,50 +423,50 @@ html(lang='en')
             .code
               .code_body_cover
                 .code_title Multi-line String
-                .code_body_subtitle Longhand
+                .code_body_subtitle Longhand ( ES5 )
                 .code_body.jsHigh
-                  | const lorem = 'Lorem ipsum \n\t'
-                  br
-                  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 'adipisicing elit \n\t'
-                .code_body_subtitle Shorthand
+                  | var lorem = "Lorem ipsum\n\t\tadipisicing elit";
+                .code_body_subtitle Shorthand ( ES6 )
                 .code_body.jsHigh.round_bottom_border
                   | // backticks can be used
                   br
                   | const lorem = `Lorem ipsum
                   br
-                  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adipisicing elit`
+                  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adipisicing elit`
           .card
             .code
               .code_body_cover
                 .code_title Spread Operator
-                .code_body_subtitle Longhand of joining arrays
+                .code_body_subtitle Longhand of joining arrays ( ES5 )
                 .code_body.jsHigh
-                  | const odd = [ 1, 3, 5 ] ;
+                  | var odd = [ 1, 3, 5 ] ;
                   br
-                  | const nums = [ 2, 4, 6 ].concat ( odd ) ;
-                .code_body_subtitle Shorthand of joining arrays
+                  | var nums = [2].concat(odd, [4, 6]);
+                .code_body_subtitle Shorthand of joining arrays ( ES6 )
                 .code_body.jsHigh
                   | const odd = [ 1, 3, 5 ] ;
                   br
                   | const nums = [ 2, ...odd, 4, 6 ] ;
                   br
                   | console.log ( nums ) ;
-                  br
-                  | // [ 2, 1, 3, 5, 4, 6]
+                .console // console [ 2, 1, 3, 5, 4, 6]
                 .breaker
-                .code_body_subtitle Longhand of cloning arrays
+                .code_body_subtitle Longhand of cloning arrays  ( ES5 )
                 .code_body.jsHigh
-                  | const arr = [ 1, 2, 3, 4 ] ;
+                  | var arr = [ 1, 2, 3, 4 ] ;
                   br
-                  | const arr2 = arr.slice ( ) ;
-                .code_body_subtitle Shorthan of cloning arrays
+                  | var arr2 = arr.slice ( ) ;
+                .code_body_subtitle Shorthan of cloning arrays ( ES6 )
                 .code_body.jsHigh
                   | const arr = [ 1, 2, 3, 4 ] ;
                   br
                   | const arr2 = [ ...arr ] ;
+                  br
+                  | console.log ( arr2 ) ;
+                .console // console [ 1, 2, 3, 4 ]
                 .breaker
                 .code_body_subtitle With destructuring notation
-                .code_body.jsHigh.round_bottom_border
+                .code_body.jsHigh
                   | const { a, b, ...z } = { a: 1, b: 2, c: 3, d: 4 };
                   br
                   | console.log ( a ) // 1
@@ -435,6 +474,7 @@ html(lang='en')
                   | console.log ( b ) // 2
                   br
                   | console.log ( z ) // { c: 3, d: 4 }
+                .console.round_bottom_border // check this again some issue is there
           .card
             .code
               .code_body_cover
